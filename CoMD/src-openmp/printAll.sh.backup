@@ -1,0 +1,48 @@
+./pf.sh cmdLineParser.h
+./pf.sh cmdLineParser.c
+
+./pf.sh CoMD_info.h
+./pf.sh CoMDTypes.h
+./pf.sh CoMD.c
+
+./pf.sh constants.h
+
+./pf.sh decomposition.h
+./pf.sh decomposition.c
+
+./pf.sh eam.h
+./pf.sh eam.c
+
+./pf.sh haloExchange.h
+./pf.sh haloExchange.c
+
+./pf.sh initAtoms.h
+./pf.sh initAtoms.c
+
+./pf.sh linkCells.h
+./pf.sh linkCells.c
+
+./pf.sh ljForce.h
+./pf.sh ljForce.c
+
+./pf.sh memUtils.h
+
+./pf.sh mycommand.h
+./pf.sh mycommand.c
+
+./pf.sh mytype.h
+
+./pf.sh parallel.h
+./pf.sh parallel.c
+
+./pf.sh performanceTimers.h
+./pf.sh performanceTimers.c
+
+./pf.sh random.h
+./pf.sh random.c
+
+./pf.sh timestep.h
+./pf.sh timestep.c
+
+./pf.sh yamlOutput.h
+./pf.sh yamlOutput.c

@@ -1,0 +1,30 @@
+CoMD.c:   const int nSteps = sim->nSteps;
+CoMD.c:   const int printRate = sim->printRate;
+CoMD.c:      timestep(sim, printRate, sim->dt);
+CoMD.c:   printPerformanceResults(sim->atoms->nGlobal, sim->printRate);
+CoMD.c:   sim->nSteps = cmd.nSteps;
+CoMD.c:   sim->printRate = cmd.printRate;
+CoMD.c:   sim->dt = cmd.dt;
+CoMD.c:   sim->domain = NULL;
+CoMD.c:   sim->boxes = NULL;
+CoMD.c:   sim->atoms = NULL;
+CoMD.c:   sim->ePotential = 0.0;
+CoMD.c:   sim->eKinetic = 0.0;
+CoMD.c:   sim->atomExchange = NULL;
+CoMD.c:   sim->pot = initPotential(cmd.doeam, cmd.potDir, cmd.potName, cmd.potType);
+CoMD.c:      latticeConstant = sim->pot->lat;
+CoMD.c:   sanityChecks(cmd, sim->pot->cutoff, latticeConstant, sim->pot->latticeType);
+CoMD.c:   sim->species = initSpecies(sim->pot);
+CoMD.c:   sim->domain = initDecomposition(
+CoMD.c:   sim->boxes = initLinkCells(sim->domain, sim->pot->cutoff);
+CoMD.c:   sim->atoms = initAtoms(sim->boxes);
+CoMD.c:   sim->atomExchange = initAtomHaloExchange(sim->domain, sim->boxes);
+CoMD.c:   val->eTot0 = (sim->ePotential + sim->eKinetic) / sim->atoms->nGlobal;
+CoMD.c:   val->nAtoms0 = sim->atoms->nGlobal;
+CoMD.c:      real_t eFinal = (sim->ePotential + sim->eKinetic) / sim->atoms->nGlobal;
+CoMD.c:      int nAtomsDelta = (sim->atoms->nGlobal - val->nAtoms0);
+CoMD.c:               sim->atoms->nGlobal);
+timestep.c:   updateLinkCells(sim->boxes, sim->atoms);
+timestep.c:   haloExchange(sim->atomExchange, sim);
+timestep.c:   for (int ii=0; ii<sim->boxes->nTotalBoxes; ++ii)
+timestep.c:      sortAtomsInCell(sim->atoms, sim->boxes, ii);

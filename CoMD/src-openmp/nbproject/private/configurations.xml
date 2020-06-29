@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name=".vscode">
+      </df>
+      <in>CoMD.c</in>
+      <in>CoMDTypes.h</in>
+      <in>CoMD_info.h</in>
+      <in>cmdLineParser.c</in>
+      <in>cmdLineParser.h</in>
+      <in>constants.h</in>
+      <in>decomposition.c</in>
+      <in>decomposition.h</in>
+      <in>eam.c</in>
+      <in>eam.h</in>
+      <in>haloExchange.c</in>
+      <in>haloExchange.h</in>
+      <in>initAtoms.c</in>
+      <in>initAtoms.h</in>
+      <in>linkCells.c</in>
+      <in>linkCells.h</in>
+      <in>ljForce.c</in>
+      <in>ljForce.h</in>
+      <in>memUtils.h</in>
+      <in>mycommand.c</in>
+      <in>mycommand.h</in>
+      <in>mytype.h</in>
+      <in>parallel.c</in>
+      <in>parallel.h</in>
+      <in>performanceTimers.c</in>
+      <in>performanceTimers.h</in>
+      <in>random.c</in>
+      <in>random.h</in>
+      <in>timestep.c</in>
+      <in>timestep.h</in>
+      <in>yamlOutput.c</in>
+      <in>yamlOutput.h</in>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>
